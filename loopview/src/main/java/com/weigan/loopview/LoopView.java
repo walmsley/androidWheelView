@@ -405,7 +405,7 @@ public class LoopView extends View {
                 while (l1 > items.size() - 1) {
                     l1 = l1 - items.size();
                 }
-                drawingStrings.put(k1, items.get(l1));
+                drawingStrings.put(k1, items.get(l1) + '\t' + );
             } else if (l1 < 0) {
 //                drawingStrings[k1] = "";
                 drawingStrings.put(k1,new IndexString());
@@ -461,7 +461,7 @@ public class LoopView extends View {
                     canvas.clipRect(0, 0, measuredWidth, (int) (itemHeight));
                     canvas.drawText(drawingStrings.get(i).string, getTextX(drawingStrings.get(i).string, paintCenterText, tempRect),
                         maxTextHeight, paintCenterText);
-                    selectedItem = items.indexOf(drawingStrings.get(i));
+                    selectedItem = drawingStrings.get(i).index;
                 } else {
                     // other item
                     canvas.clipRect(0, 0, measuredWidth, (int) (itemHeight));
