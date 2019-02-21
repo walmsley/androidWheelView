@@ -405,7 +405,7 @@ public class LoopView extends View {
                 while (l1 > items.size() - 1) {
                     l1 = l1 - items.size();
                 }
-                drawingStrings.put(k1, items.get(l1) + '\t' + );
+                drawingStrings.put(k1, items.get(l1));
             } else if (l1 < 0) {
 //                drawingStrings[k1] = "";
                 drawingStrings.put(k1,new IndexString());
