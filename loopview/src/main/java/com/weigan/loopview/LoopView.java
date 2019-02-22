@@ -98,9 +98,9 @@ public class LoopView extends View {
      * @param lineSpacingMultiplier
      */
     public void setLineSpacingMultiplier(float lineSpacingMultiplier) {
-        if (lineSpacingMultiplier > 1.0f) {
+        //if (lineSpacingMultiplier > 1.0f) {
             this.lineSpacingMultiplier = lineSpacingMultiplier;
-        }
+        //}
     }
 
     /**
