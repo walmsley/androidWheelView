@@ -155,7 +155,7 @@ public class LoopView extends View {
         textSize = typedArray.getInteger(R.styleable.androidWheelView_awv_textsize, DEFAULT_TEXT_SIZE);
         textSize = (int) (Resources.getSystem().getDisplayMetrics().density * textSize);
         lineSpacingMultiplier = typedArray.getFloat(R.styleable.androidWheelView_awv_lineSpace, DEFAULT_LINE_SPACE);
-        centerTextColor = typedArray.getInteger(R.styleable.androidWheelView_awv_centerTextColor, 0xff313131);
+        centerTextColor = typedArray.getInteger(R.styleable.androidWheelView_awv_centerTextColor, 0xffffffff);
         outerTextColor = typedArray.getInteger(R.styleable.androidWheelView_awv_outerTextColor, 0xffafafaf);
         dividerColor = typedArray.getInteger(R.styleable.androidWheelView_awv_dividerTextColor, 0xffc5c5c5);
         itemsVisibleCount =
