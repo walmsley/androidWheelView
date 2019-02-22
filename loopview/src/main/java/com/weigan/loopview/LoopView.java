@@ -194,14 +194,14 @@ public class LoopView extends View {
         paintOuterText = new Paint();
         paintOuterText.setColor(outerTextColor);
         paintOuterText.setAntiAlias(true);
-        paintOuterText.setTypeface(Typeface.MONOSPACE);
+        paintOuterText.setTypeface(Typeface.DEFAULT);
         paintOuterText.setTextSize(textSize);
 
         paintCenterText = new Paint();
         paintCenterText.setColor(centerTextColor);
         paintCenterText.setAntiAlias(true);
         paintCenterText.setTextScaleX(scaleX);
-        paintCenterText.setTypeface(Typeface.MONOSPACE);
+        paintCenterText.setTypeface(Typeface.DEFAULT_BOLD);
         paintCenterText.setTextSize(textSize);
 
         paintIndicator = new Paint();
