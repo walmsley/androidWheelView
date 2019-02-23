@@ -270,6 +270,12 @@ public class LoopView extends View {
         mFuture = mExecutor.scheduleWithFixedDelay(new InertiaTimerTask(this, velocityY), 0, velocityFling,
             TimeUnit.MILLISECONDS);
     }
+    
+    public void scrollWithSpeed(float velocityY, int velocityFling) {
+        cancelFuture();
+        mFuture = mExecutor.scheduleWithFixedDelay(new InertiaTimerTask(this, velocityY), 0, velocityFling,
+            TimeUnit.MILLISECONDS);
+    }
 
     public void cancelFuture() {
         if (mFuture != null && !mFuture.isCancelled()) {
