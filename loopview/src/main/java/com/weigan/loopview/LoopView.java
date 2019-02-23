@@ -276,6 +276,22 @@ public class LoopView extends View {
         mFuture = mExecutor.scheduleWithFixedDelay(new InertiaTimerTask(this, velocityY), 0, velocityFling,
             TimeUnit.MILLISECONDS);
     }
+    
+    public void simulateTouchScroll(int segmentIncrement, boolean daggle) {
+        //float y = event.getY();
+        //double l = Math.acos((radius - y) / radius) * radius;
+        //int circlePosition = (int) ((l + itemHeight / 2) / itemHeight);
+
+        //float extraOffset = (totalScrollY % itemHeight + itemHeight) % itemHeight;
+        //mOffset = (int) ((circlePosition - itemsVisibleCount / 2) * itemHeight - extraOffset);
+        mOffset = (int) (segmentIncrement * itemHeight)
+
+        if (daggle) {
+            smoothScroll(ACTION.DAGGLE);
+        } else {
+            smoothScroll(ACTION.CLICK);
+        }
+    }
 
     public void cancelFuture() {
         if (mFuture != null && !mFuture.isCancelled()) {
