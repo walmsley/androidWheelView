@@ -367,6 +367,12 @@ public class LoopView extends View {
             invalidate();
         }
     }
+    
+    public void smoothScrollSegmentUpdate(int segmentIncrement) {
+        float dy = segmentIncrement * lineSpacingMultiplier * maxTextHeight;
+        totalScrollY = (int) (totalScrollY + dy);
+        invalidate();
+    }
 
     @Override
     protected void onDraw(Canvas canvas) {
